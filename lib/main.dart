@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:transport_ui/myHome.dart';
 
 void main(){
   SystemChrome.setSystemUIOverlayStyle(
@@ -15,23 +16,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Transport UI',
       theme: ThemeData(
-
-        primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: Colors.pinkAccent,
+        fontFamily: 'Poppins',
+        textTheme: TextTheme(body1: TextStyle(color:Colors.black87))
       ),
-      home: MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({Key key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Scaffold(
-
-      ),
+      home: MyHome(),
     );
   }
 }
