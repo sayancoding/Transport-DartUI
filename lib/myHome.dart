@@ -21,7 +21,7 @@ class MyHome extends StatefulWidget {
     BarItem(
       text: "Profile",
       iconData: Icons.person,
-      color: Colors.yellow[700],
+      color: Colors.yellow[800],
     ),
   ];
 
@@ -32,16 +32,22 @@ class MyHome extends StatefulWidget {
 }
 
 class _MyHomeState extends State<MyHome> {
+  int selectedItem ;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-          child: Container(
-        child: Text("HomeContent"),
-      )),
+      body: Container(
+        color: widget.barItems[selectedItem].color,    
+      ),
       bottomNavigationBar: AnimatedBottomBar(
         barItems: widget.barItems,
-        animationDuration: const Duration(milliseconds: 1000),
+        animationDuration: const Duration(milliseconds: 300),
+        onTapBar: (index){
+          setState(() {
+            selectedItem = index;
+            print(selectedItem);
+          });
+        },
       ),
     );
   }

@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Transport UI',
       theme: ThemeData(
-        scaffoldBackgroundColor: Colors.pinkAccent,
+        scaffoldBackgroundColor: Colors.white,
         fontFamily: 'Poppins',
         textTheme: TextTheme(body1: TextStyle(color:Colors.black87))
       ),
