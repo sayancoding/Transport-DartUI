@@ -20,8 +20,9 @@ class _AnimatedBottomBarState extends State<AnimatedBottomBar> with TickerProvid
   @override
   Widget build(BuildContext context) {
     return Material(
-      borderRadius: BorderRadius.only(topLeft: Radius.circular(25),topRight: Radius.circular(25)),
       elevation: 10.0,
+      color: Colors.white,
+      borderRadius: BorderRadius.only(topLeft: Radius.circular(25),topRight: Radius.circular(25)),
       child: Padding(
         padding: const EdgeInsets.only(
             bottom: 18.0, top: 18.0, left: 16.0, right: 16.0),

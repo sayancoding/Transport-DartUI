@@ -32,12 +32,12 @@ class MyHome extends StatefulWidget {
 }
 
 class _MyHomeState extends State<MyHome> {
-  int selectedItem ;
+  int selectedItem = 0 ;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: widget.barItems[selectedItem].color,    
+        color: Colors.white,    
       ),
       bottomNavigationBar: AnimatedBottomBar(
         barItems: widget.barItems,
@@ -45,7 +45,7 @@ class _MyHomeState extends State<MyHome> {
         onTapBar: (index){
           setState(() {
             selectedItem = index;
-            print(selectedItem);
+            // print(selectedItem);
           });
         },
       ),
