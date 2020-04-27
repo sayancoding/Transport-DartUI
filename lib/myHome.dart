@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:transport_ui/myListView.dart';
 import 'package:transport_ui/navigatedBottomBar.dart';
 
 class MyHome extends StatefulWidget {
@@ -37,7 +38,11 @@ class _MyHomeState extends State<MyHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.white,    
+        color: Colors.white,
+        child: Padding(
+          padding: const EdgeInsets.only(top: 0,left: 0),
+          child: MyListView(),
+        ),  
       ),
       bottomNavigationBar: AnimatedBottomBar(
         barItems: widget.barItems,
