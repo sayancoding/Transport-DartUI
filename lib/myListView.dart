@@ -37,9 +37,18 @@ class _MyListViewState extends State<MyListView> {
     return Column(
       children: <Widget>[
         Container(
-          color: Colors.blue.withOpacity(0.3),
-          height: MediaQuery.of(context).size.height * 0.2,
-          child: Center(child: Text("Header")),
+          color: Colors.indigoAccent[400],
+          height: MediaQuery.of(context).size.height * 0.18,
+          child: Center(
+            child: Text(
+              "HTTP Get Request",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 22.0,
+              fontWeight: FontWeight.w600
+            ) ,
+            )
+          ),
         ),
         Expanded(
           child: Container(
@@ -57,8 +66,15 @@ class _MyListViewState extends State<MyListView> {
                     itemBuilder: (BuildContext context, int index) {
                       return Container(
                         margin: EdgeInsets.all(4.0),
-                        color: Colors.yellowAccent,
-                        child: Text(snapshot.data[index].title)
+                        color: Colors.indigoAccent,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(snapshot.data[index].title,
+                            style: TextStyle(
+                              color: Colors.white
+                            ),
+                          ),
+                        )
                       );
                     });
               },
